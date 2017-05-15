@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WOW</title>
+    <link rel="stylesheet" href="css/animate.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            border:none;
+        }
+        .box{
+            width: 980px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        .box>div{
+            width: 450px;
+            height: 350px;
+            background: red;
+        }
+        .box>div:nth-child(1){
+            float: left;
+            margin: 10px;
+        }
+        .box>div:nth-child(2){
+            float: right;
+            margin: 10px;
+        }
+    </style>
+
+
+</head>
+<body>
+<div class="box">
+    <div class="wow slideInLeft">左边</div>
+    <div class="wow slideInRight">右边</div>
+</div>
+<div class="box">
+    <div class="wow slideInLeft">左边</div>
+    <div id="test" class="wow slideInRight"data-wow-offset="500">右边</div>
+</div>
+<div class="box">
+    <div class="wow slideInLeft">左边</div>
+    <div class="wow slideInRight">右边</div>
+</div>
+<div class="box">
+    <div class="wow slideInLeft">左边</div>
+    <div class="wow slideInRight">右边</div>
+</div>
+<div class="box">
+    <div class="wow slideInLeft">左边</div>
+    <div class="wow slideInRight">右边</div>
+</div>
+<div class="box">
+    <div class="wow slideInLeft">左边</div>
+    <div class="wow slideInRight">右边</div>
+</div>
+<div class="box">
+    <div class="wow slideInLeft">左边</div>
+    <div class="wow slideInRight">右边</div>
+</div>
+<div class="box">
+    <div class="wow slideInLeft">左边</div>
+    <div class="wow slideInRight">右边</div>
+</div>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/wow.js"></script>
+<script>
+    $(function () {
+        new WOW().init();
+        /*监听页面的滚动*/
+        var vHeight = 0,vScrollTop=0,vOffsetTop = 0,vWowOffsetTop =0;
+        $(window).on('scroll',function () {
+//            console.log("滚动了");
+            /*求出可视区域的高度*/
+            vHeight= $(window).height();
+//            console.log(vHeight);
+            /*求出scrollTop*/
+            vScrollTop = $(window).scrollTop();
+//            console.log(vScrollTop);
+            /*求出vWowOffsetTop*/
+            vOffsetTop =$('#test').offset().top;
+//            console.log(vWowOffsetTop);
+            vWowOffsetTop = (vHeight+vScrollTop-vOffsetTop);
+            console.log(vWowOffsetTop);
+
+
+        })
+    })
+</script>
+</body>
+</html>

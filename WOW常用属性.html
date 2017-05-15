@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WOW</title>
+    <link rel="stylesheet" href="css/animate.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            border:none;
+        }
+        .box{
+            width: 980px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        .box>div{
+            width: 450px;
+            height: 350px;
+            background: red;
+        }
+        .box>div:nth-child(1){
+            float: left;
+            margin: 10px;
+        }
+        .box>div:nth-child(2){
+            float: right;
+            margin: 10px;
+        }
+    </style>
+
+
+</head>
+<body>
+<div class="box">
+    <div class="wow slideInLeft">左边</div>
+    <div class="wow slideInRight">右边</div>
+</div>
+<div class="box">
+    <div class="wow slideInLeft">左边</div>
+    <div class="wow slideInRight"data-wow-offset="500">右边</div>
+</div>
+<div class="box">
+    <div class="wow slideInLeft">左边</div>
+    <div class="wow slideInRight">右边</div>
+</div>
+<div class="box">
+    <div class="wow slideInLeft">左边</div>
+    <div class="wow slideInRight">右边</div>
+</div>
+<div class="box">
+    <div class="wow slideInLeft">左边</div>
+    <div class="wow slideInRight">右边</div>
+</div>
+<div class="box">
+    <div class="wow slideInLeft">左边</div>
+    <div class="wow slideInRight">右边</div>
+</div>
+<div class="box">
+    <div class="wow slideInLeft">左边</div>
+    <div class="wow slideInRight">右边</div>
+</div>
+<div class="box">
+    <div class="wow slideInLeft">左边</div>
+    <div class="wow slideInRight">右边</div>
+</div>
+<script src="js/wow.js"></script>
+<script>
+    window.onload = function () {
+        new WOW().init();
+    }
+</script>
+</body>
+</html>
